@@ -51,7 +51,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* display: none; */
 }
 
 .star {
@@ -111,7 +110,7 @@ main {
     color: var(--White);
 }
 
-.ratings>div:active {
+.ratings>div:focus {
     color: var(--White);
     background-color: var(--Light-Grey);
 }

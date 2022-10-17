@@ -6,12 +6,14 @@ let thankYou = document.querySelector(".thank-you");
 
 ratings.forEach(function (value) {
   value.addEventListener("click", function () {
-    this.style.cssText = "background-color: hsl(217, 12%, 63%); color:white;";
     span.textContent = this.textContent;
   });
 });
 
 submit.onclick = function () {
+  if (span.textContent === "") {
+    submit.preventDefault();
+  }
   ratingState.style.display = "none";
   thankYou.style.display = "flex";
 };
